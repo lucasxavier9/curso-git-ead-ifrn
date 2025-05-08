@@ -1,0 +1,23 @@
+mkdir curso-git-ead-ifrn
+cd curso-git-ead-ifrn
+git clone https://gitlab.com/mizael.cortez/curso-branchs-ifrn-ead .
+echo "#EMBARCATECH" > texto.txt
+git add texto.txt
+git commit -m "feat: adiciona texto.txt com conteúdo inicial na main"
+git checkout -b feature-1
+echo "Linha modificada na feature-1" > texto.txt
+git add texto.txt
+git commit -m "feat: modifica conteúdo de texto.txt na feature-1"
+git checkout main
+echo "Linha modificada na main" > texto.txt
+git add texto.txt
+git commit -m "feat: modifica conteúdo de texto.txt na main"
+git merge feature-1
+resultado" warning: Cannot merge binary files: texto.txt (HEAD vs. feature-1)
+Auto-merging texto.txt
+CONFLICT (content): Merge conflict in texto.txt
+Automatic merge failed; fix conflicts and then commit the result. "
+corrigi o conflito manualmente
+git add texto.txt
+git checkout -b add-comandos
+echo "COMANDOS: " > comandos.txt
